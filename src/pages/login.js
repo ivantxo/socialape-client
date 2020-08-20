@@ -29,10 +29,15 @@ class login extends Component {
     };
   }
 
-  componentWillReceiveProps (nextProps) {
+  static getDerivedStateFromProps (nextProps, state) {
     if (nextProps.ui.errors) {
-      this.setState({ errors: nextProps.ui.errors });
+      // this.setState({ errors: nextProps.ui.errors });
+      return {
+        ...state,
+        errors: nextProps.ui.errors
+      };
     }
+    return null;
   };
 
   handleSubmit = (event) => {
