@@ -94,7 +94,7 @@ export class Scream extends Component {
     );
     dayjs.extend(relativeTime);
     const deleteButton = authenticated && userHandle === handle
-      ? <DeleteScream screamId={screamId} />
+      ? (<DeleteScream screamId={screamId} />)
       : null;
     return (
       <Card className={classes.card}>
