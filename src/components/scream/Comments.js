@@ -21,7 +21,7 @@ const styles = (theme) => ({
   }
 });
 
-export class Comments extends Component {
+class Comments extends Component {
   render() {
     const { classes, comments } = this.props;
     return (

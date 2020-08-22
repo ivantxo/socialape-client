@@ -36,7 +36,7 @@ const styles = {
   }
 };
 
-export class Scream extends Component {
+class Scream extends Component {
   render() {
     const { 
       classes, 
