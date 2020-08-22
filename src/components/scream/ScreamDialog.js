@@ -5,6 +5,7 @@ import MyButton from '../../util/MyButton';
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
 import LikeButton from './LikeButton';
+import Comments from './Comments';
 
 // Material UI imports
 import Dialog from '@material-ui/core/Dialog';
@@ -24,10 +25,6 @@ import { getScream } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme.spreadthis,
-  invisibleSeparator: {
-    border: 'none',
-    margin: 4
-  },
   profileImage: {
     maxWidth: 200,
     height: 200,
@@ -77,6 +74,7 @@ class ScreamDialog extends Component {
         commentCount,
         userImage,
         userHandle,
+        comments,
       },
       ui: {
         loading
@@ -120,6 +118,8 @@ class ScreamDialog extends Component {
           </MyButton>
           <span>{commentCount} comments</span>
         </Grid>
+        <hr className={classes.visibleSeparator} />
+        <Comments comments={comments} />
       </Grid>
     );
 
