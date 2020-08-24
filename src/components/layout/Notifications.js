@@ -124,7 +124,7 @@ class Notifications extends Component {
 
 NotificationsIcon.propTypes = {
   markNotificationRead: PropTypes.func.isRequired,
-  notifications: PropTypes.object.isRequired,
+  notifications: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
